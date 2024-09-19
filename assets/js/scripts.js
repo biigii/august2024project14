@@ -1,41 +1,29 @@
-function rotateImageOne() {
-  document.querySelector("#image-1").style.rotate = "360deg";
+function add() {
+    var value = document.querySelector("#input").value;
+    var ul = document.querySelector("ul.list");
+    var li = document.createElement("li");
+
+    li.textContent = value;
+    ul.appendChild(li)
 }
 
-function deleteImage() {
-  document.querySelector("#image-1").style.display = "none";
+
+for (var counter = 1; counter <= 200; counter++) {
+    var figure = document.querySelector("figure.images")
+    var img = document.createElement("img")
+    img.src = "https://picsum.photos/id/" + counter + "/100"
+
+    figure.appendChild(img)
 }
 
-function addText() {
-  var p = document.createElement("p");
-  var article = document.querySelector("article.text");
 
-  p.textContent =
-    "The easiest way to get icons on your website is with a Kit. It's your very own custom version of Font Awesome, all bundled up with only the icons, tools, and settings you need.";
-  p.style.color = "#f11";
-  article.appendChild(p);
-}
+// var countries = ["new zealand", "australia", "usa", "uk", "japan"]
 
-function addImage() {
-  var image = document.createElement("img");
-  var figure = document.querySelector(".frame");
 
-  // you can add src to img two ways
-  image.src = "https://picsum.photos/id/1050/300";
-  // image.setAttribute("src", "https://picsum.photos/id/1050/300")
+// function createList(country) {
+//     var h2 = document.createElement("h2");
+//     h2.textContent = country;
+//     document.body.appendChild(h2)
+// }
 
-  // image.alt = "this is an image added via javascript"
-  image.setAttribute("alt", "this is an image added via javascript");
-
-  image.width = 500;
-
-  figure.appendChild(image);
-}
-
-function readText() {
-    var span = document.querySelector("span#txt")
-    var text = document.querySelector("input[data-some-word]")
-    var value = text.value
-
-    span.innerHTML = value
-}
+// countries.forEach(createList)
