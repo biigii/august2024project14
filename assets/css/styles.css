@@ -8,25 +8,54 @@ body {
   font-family: sans-serif;
 }
 
-p {
-  background-color: #e56;
+header,
+footer,
+aside,
+main,
+section,
+article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
   font-size: 3em;
 }
 
-figure.grid,
-section.grid {
-  background-color: #ccc;
-  display: grid;
-  height: 100%;
-  gap: 10px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  justify-items: end;
-  align-items: end;
+header {
+  background-color: lightgreen;
+  grid-area: header;
 }
-figure.grid p:first-child,
-section.grid p:first-child {
-  background-color: #0ff;
-  align-self: start;
-  justify-self: start;
+
+section {
+  background-color: lightblue;
+  grid-area: section;
+}
+
+main {
+  background-color: lightcoral;
+  grid-area: main;
+}
+
+article {
+  background-color: lightseagreen;
+  grid-area: article;
+}
+
+aside {
+  background-color: lightpink;
+  grid-area: aside;
+}
+
+footer {
+  background-color: lightgoldenrodyellow;
+  grid-area: footer;
+}
+
+body {
+  background-color: #eee;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 100px 1fr 1fr 200px;
+  grid-template-areas: "aside footer footer footer" "aside main section section" "aside main article article" "header header header header";
 }/*# sourceMappingURL=styles.css.map */

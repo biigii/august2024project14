@@ -10,37 +10,73 @@ body {
   font-family: sans-serif;
 }
 
-p {
-  background-color: $brand;
+header,
+footer,
+aside,
+main,
+section,
+article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
   font-size: 3em;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
 }
 
-figure.grid,
-section.grid {
-  background-color: #ccc;
+header {
+  background-color: lightgreen;
+  grid-area: header;
+}
+
+section {
+  background-color: lightblue;
+  grid-area: section;
+}
+
+main {
+  background-color: lightcoral;
+  grid-area: main;
+}
+
+article {
+  background-color: lightseagreen;
+  grid-area: article;
+}
+
+aside {
+  background-color: lightpink;
+  grid-area: aside;
+}
+
+footer {
+  background-color: lightgoldenrodyellow;
+  grid-area: footer;
+}
+
+body {
+  background-color: #eee;
   display: grid;
-  height: 100%;
-  // grid-template-columns: repeat(3, 200px);
-  // grid-template-rows: repeat(3, 200px);
-  gap: 10px;
-  // justify-content: center;
-  // align-content: center;
-  // place-content: center;
+  gap: 5px;
+  //   grid-template-columns: 1fr 1fr 1fr 1fr;
+  //   grid-template-rows: 130px 1fr 200px;
+  //   grid-template-areas:
+  //     "header header header header"
+  //     "aside main section article"
+  //     "footer footer footer footer";
 
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  //   grid-template-columns: 1fr 1fr 1fr;
+  //   grid-template-rows: 120px 1fr 1fr 150px;
+  //   grid-template-areas:
+  //     "header  header  header"
+  //     "aside   main    main"
+  //     "section section article"
+  //     "footer  footer  footer";
 
-  justify-items: end;
-  align-items: end;
-
-  p:first-child {
-    background-color: #0ff;
-    align-self: start;
-    justify-self: start;
-  }
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 100px 1fr 1fr 200px;
+  grid-template-areas:
+    "aside footer footer footer"
+    "aside main section section"
+    "aside main article article"
+    "header header header header";
 }
-
-
