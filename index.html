@@ -3,13 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="./assets/css/styles.min.css" />
     <script defer src="./assets/js/scripts.js"></script>
     <title>project 14</title>
   </head>
   <body>
     <h1>project 14</h1>
-    <button id="btn-1">button one</button>
-    <button id="btn-2">button two</button>
+
+    <input type="text" data-some-word>
+    <button onclick="readText()">submit</button>
+    <span id="txt"></span>
+    <hr>
+
+    <article class="text"></article>
+
+    <button onclick="rotateImageOne()">button one</button>
+    <button onclick="addText()">button two</button>
+    <button id="btn-3" onclick="addImage()">button three</button>
+
+    <figure class="frame"></figure>
+
+    <figure class="image" id="image-1">
+      <i onclick="deleteImage()" class="fa-solid fa-circle-xmark fa-2x"></i>
+      <img  src="https://picsum.photos/id/34/300" alt="" />
+    </figure>
+
+ 
   </body>
 </html>

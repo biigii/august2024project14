@@ -1,29 +1,41 @@
-// var h1 = document.querySelector("h1");
-
-// h1.style.color = "#f11";
-// h1.style.fontSize = "5em";
-
-// function
-// function myFirstFunction() {
-//     var body = document.body;
-//     body.style.backgroundColor = "#fe1"
-// }
-
-// myFirstFunction();
-
-function changeBodyBackground() {
-  document.body.style.backgroundColor = "#69f";
+function rotateImageOne() {
+  document.querySelector("#image-1").style.rotate = "360deg";
 }
 
-document
-  .querySelector("#btn-1")
-  .addEventListener("click", changeBodyBackground);
-
-function changeH1Styling() {
-  var h1 = document.querySelector("h1");
-  h1.style.color = "#ff1";
-  h1.style.textAlign = "center";
-  h1.style.fontSize = "4em";
+function deleteImage() {
+  document.querySelector("#image-1").style.display = "none";
 }
 
-document.querySelector("#btn-2").addEventListener("click", changeH1Styling);
+function addText() {
+  var p = document.createElement("p");
+  var article = document.querySelector("article.text");
+
+  p.textContent =
+    "The easiest way to get icons on your website is with a Kit. It's your very own custom version of Font Awesome, all bundled up with only the icons, tools, and settings you need.";
+  p.style.color = "#f11";
+  article.appendChild(p);
+}
+
+function addImage() {
+  var image = document.createElement("img");
+  var figure = document.querySelector(".frame");
+
+  // you can add src to img two ways
+  image.src = "https://picsum.photos/id/1050/300";
+  // image.setAttribute("src", "https://picsum.photos/id/1050/300")
+
+  // image.alt = "this is an image added via javascript"
+  image.setAttribute("alt", "this is an image added via javascript");
+
+  image.width = 500;
+
+  figure.appendChild(image);
+}
+
+function readText() {
+    var span = document.querySelector("span#txt")
+    var text = document.querySelector("input[data-some-word]")
+    var value = text.value
+
+    span.innerHTML = value
+}

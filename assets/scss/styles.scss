@@ -4,3 +4,25 @@ button {
     text-transform: uppercase;
     font-size: 1.5em;
 }
+
+#image-1 {
+    transition: rotate 3s;
+}
+
+.image {
+    position: relative;
+    width: 300px;
+    i {
+        cursor: pointer;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        color: #fff;
+    }
+}
+
+input[type="text"] {
+    width: 400px;
+    height: 70px;
+    font-size: 2em;
+}
