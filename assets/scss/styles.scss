@@ -4,33 +4,41 @@ $brand: #e56;
   margin: 0;
 }
 
-h1 {
-  text-transform: capitalize;
-  text-align: center;
-  font-size: 5em;
-  margin-bottom: 50px;
+html,
+body {
+  height: 100%;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-nav {
-  height: 140px;
+p {
   background-color: $brand;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-bottom: 100px;
-  a {
-    font-size: 2em;
-    color: #fff;
-    text-decoration: none;
-  }
+  font-size: 3em;
 }
 
-article {
-    display: flex;
-    gap: 20px;
+// article {
+//     display: grid;
+//     gap: 10px;
+//     grid-auto-flow: column;
+// }
+
+section.grid {
+  height: 100%;
+  background-color: #ddd;
+
+  display: grid;
+  gap: 5px;
+  //   grid-auto-flow: row;
+  //  grid-template-columns and grid-template-rows
+  // column 1 column 2 column 3
+  //   grid-template-columns: 200px 400px 100px 50px;
+  //   grid-template-rows: 200px 300px 400px;
+
+  // grid-template-columns: 200px 200px 200px;
+  //   grid-template-columns: repeat(3, 200px);
+  //   grid-template-rows: repeat(3, 300px);
+
+  // fr or fraction
+
+  // grid-template-columns: 1fr 1fr; // 2 fractions here 
+  grid-template-columns: 1fr 1fr 1fr; // 3 fractions/parts
+  grid-template-rows: 150px 1fr 200px; // 9 fractions or parts
 }
